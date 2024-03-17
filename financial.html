@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    header {
+      background-color: #f5f5dc; /* Cream background color */
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333; /* Dark gray text color */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+           <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+      </ul>
+    </nav>
+  </header>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAAS Financial Aid Assistance</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333; /* Darker container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+  }
+  h1 {
+    text-align: center;
+  }
+  .prompt {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .question-box {
+    background-color: #444; /* Darker box background */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .answer {
+    display: none;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>KAAS Financial Aid Assistance</h1>
+
+  <div class="prompt" onclick="toggleAnswer(1)">
+    <div class="question-box">
+      <h3>How can I easily see and manage my money in one place?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer1">
+    <p>One efficient way to manage your finances in one place is by using budgeting and finance tracking apps such as Mint, Personal Capital, or YNAB (You Need a Budget). These apps allow you to link your bank accounts, credit cards, and investments, providing a comprehensive overview of your financial situation.</p>
+  </div>
+
+  <div class="prompt" onclick="toggleAnswer(2)">
+    <div class="question-box">
+      <h3>What are the best ways to invest for my future?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer2">
+    <p>The best ways to invest for your future depend on your financial goals, risk tolerance, and time horizon. Generally, diversified investment portfolios including stocks, bonds, real estate, and index funds tend to perform well over the long term. Consider consulting with a financial advisor to tailor an investment strategy suited to your specific needs.</p>
+  </div>
+
+  <div class="prompt" onclick="toggleAnswer(3)">
+    <div class="question-box">
+      <h3>What's the best travel rewards credit card right now?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer3">
+    <p>As credit card offerings change frequently, it's essential to compare current offers based on your travel habits and spending preferences. Websites like NerdWallet or Credit Karma provide updated lists of the best travel rewards credit cards based on factors such as sign-up bonuses, rewards rates, and annual fees.</p>
+  </div>
+
+  <div class="prompt" onclick="toggleAnswer(4)">
+    <div class="question-box">
+      <h3>How can I consolidate my debt and pay it off faster?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer4">
+    <p>Debt consolidation involves combining multiple debts into a single loan with a lower interest rate, making it easier to manage and potentially saving money on interest payments. Options for debt consolidation include balance transfer credit cards, personal loans, or home equity loans. However, it's crucial to weigh the pros and cons of each option and ensure that consolidation will lead to lower overall interest costs.</p>
+  </div>
+
+  <div class="prompt" onclick="toggleAnswer(5)">
+    <div class="question-box">
+      <h3>What does home affordability look like right now?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer5">
+    <p>Home affordability varies depending on factors such as location, housing market conditions, and personal financial circumstances. Tools like mortgage calculators can help you estimate affordability by considering factors like income, down payment, interest rates, and monthly expenses. Additionally, consulting with a mortgage lender can provide insights into current market conditions and available financing options.</p>
+  </div>
+
+  <div class="prompt" onclick="toggleAnswer(6)">
+    <div class="question-box">
+      <h3>How can I take full advantage of tax deductions and credits this year?</h3>
+    </div>
+  </div>
+  <div class="answer" id="answer6">
+    <p>Maximizing tax deductions and credits requires careful planning and awareness of available tax breaks. Common deductions and credits include those for mortgage interest, charitable contributions, education expenses, retirement contributions, and healthcare costs. Consider consulting with a tax professional to ensure you're taking advantage of all eligible tax benefits and optimizing your tax strategy.</p>
+  </div>
+
+</div>
+
+<script>
+  function toggleAnswer(id) {
+    var answer = document.getElementById("answer" + id);
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+    } else {
+      answer.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>

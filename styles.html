@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Expenses and Bank Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #006400; /* Dark green heading */
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #006400; /* Dark green button */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #008000; /* Dark green hover color */
+        }
+        .response {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #006400; /* Dark green response background */
+            color: #fff;
+            border-radius: 8px;
+        }
+        .response h2 {
+            color: #fff;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Expenses and Bank Recommendation</h1>
+    <form id="collegeForm">
+        <label for="college">Enter your college:</label>
+        <input type="text" id="college" name="college" required>
+        <label for="creditScore">Enter your credit score:</label>
+        <input type="text" id="creditScore" name="creditScore" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="response" id="response" style="display: none;">
+        <h2>Results:</h2>
+        <p id="expense"></p>
+        <p id="bank"></p>
+    </div>
+
+    <script>
+        document.getElementById("collegeForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var college = document.getElementById("college").value;
+            var creditScore = parseInt(document.getElementById("creditScore").value);
+            var response = document.getElementById("response");
+            var expense = document.getElementById("expense");
+            var bank = document.getElementById("bank");
+
+            // Reset previous responses
+            response.style.display = "none";
+            expense.textContent = "";
+            bank.textContent = "";
+
+            // Calculate expenses based on college
+            var expenses;
+            switch(college.toLowerCase()) {
+                case "harvard":
+                    expenses = "$54,269/year";
+                    break;
+                case "ucla":
+                    expenses = "$35,592/year";
+                    break;
+                case "uc berkeley":
+                    expenses = "$15,444/year";
+                    break;
+                case "stanford":
+                    expenses = "$61,731/year";
+                    break;
+                case "ucsd":
+                    expenses = "$37,662/year";
+                    break;
+                default:
+                    expenses = "Unknown college";
+            }
+
+            // Determine bank recommendation based on credit score
+            var recommendedBank;
+            if (creditScore >= 750) {
+                recommendedBank = "Risla";
+            } else if (creditScore >= 700) {
+                recommendedBank = "ISL";
+            } else if (creditScore >= 650) {
+                recommendedBank = "Sallie Mae";
+            } else if (creditScore >= 600) {
+                recommendedBank = "Ascent";
+            } else {
+                recommendedBank = "MPOWER";
+            }
+
+            // Display responses
+            expense.textContent = "College expenses: " + expenses;
+            bank.textContent = "Recommended bank: " + recommendedBank;
+            response.style.display = "block";
+        });
+    </script>
+</body>
+</html>

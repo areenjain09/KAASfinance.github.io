@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    header {
+      background-color: #f5f5dc; /* Cream background color */
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333; /* Dark gray text color */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+                 <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+      </ul>
+    </nav>
+  </header>
+  <!-- Moved the Investing section after the header -->
+  <section id="investing">
+    <h1>Investing Tab</h1>
+    <nav>
+      <ul>
+      </ul>
+    </nav>
+    <main>
+        <section id="chart">
+            <h2>Apple Price Chart with Volume Indicator</h2>
+            <!-- TradingView Bitcoin Chart with Fibonacci Trend and RSI Indicator -->
+            <div class="tradingview-widget-container" style="height:700px;width:100%">
+                <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                {
+                    "autosize"= true,
+                    "symbol"= "BITSTAMP:BTCUSD",
+                    "interval"= "D",
+                    "timezone"= "America/Los_Angeles",
+                    "theme"= "dark",
+                    "style"= "8",
+                    "locale"= "en",
+                    "enable_publishing"= false,
+                    "allow_symbol_change"= true,
+                    "calendar"= false,
+                    "studies"= [
+                        "RSI@tv-basicstudies",
+                        "Fibonacci@tv-basicstudies"
+                    ],
+                    "support_host"= "https://www.tradingview.com",
+                    "width"= "100%", // Set width to 100%
+                    "height"= "100%" // Set height to 100%
+                }
+                </script>
+            </div>
+        </section>
+        <section id="widgets">
+            <!-- Widgets -->
+            <div class="widget-container">
+                <!-- Widget 1: Screener -->
+                <div class="tradingview-widget-container-half">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                    {
+                        "width"= 600,
+                        "height"= 550,
+                        "defaultColumn"= "overview",
+                        "screener_type"= "crypto_mkt",
+                        "displayCurrency"= "USD",
+                        "colorTheme"= "dark",
+                        "locale"= "en"
+                    }
+                    </script>
+                </div>
+                <!-- Widget 2: Widget -->
+                <div class="tradingview-widget-container-half">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                    {
+                        "width"= 600,
+                        "height"= 550,
+                        "defaultColumn"= "overview",
+                        "screener_type"= "crypto_mkt",
+                        "displayCurrency"= "USD",
+                        "colorTheme"= "dark",
+                        "locale"= "en"
+                    }
+                    </script>
+                </div>
+                <!-- Widget 3: News Widget -->
+                <div class="tradingview-widget-container-half">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                    {
+                        "feedMode"= "all_symbols",
+                        "isTransparent"= false,
+                        "displayMode"= "regular",
+                        "width"= 600,
+                        "height"= 550,
+                        "colorTheme"= "dark",
+                        "locale"= "en"
+                    }
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
+    <title>Investing Tab</title>
+    <!-- TradingView Chart Styles -->
+    <style>
+        body {
+            background-color: #202124; /* Dark background color */
+            color: #FFFFFF; /* White text color */
+            font-size: 20px; /* Font size */
+        }
+
+        .tradingview-widget-container {
+            width: 100%; /* Make it flexible */
+            height: 700px; /* Adjust the height as needed */
+            margin-bottom: 20px;
+        }
+        .widget-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Adjust individual widget widths */
+        .tradingview-widget-container-half {
+            width: calc(33.33% - 10px); /* Subtract margin */
+        }
+
+        /* Remove bullet points */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Broker styles */
+        .broker-info {
+            font-size: 75px; /* Font size */
+            margin-top: 20px;
+        }
+
+        .broker-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .broker-table th,
+        .broker-table td {
+            border: 1px solid #FFFFFF;
+            padding: 10px;
+        }
+
+        .broker-table th {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: left;
+        }
+
+        .broker-table td {
+            background-color: #444444;
+        }
+
+        .broker-table a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    </style>
+    <header>
+    <nav>
+        <ul>
+            <!-- Removed the Chart and Brokers links -->
+        </ul>
+    </nav>
+    <main>
+        <section id="brokers">
+            <table class="broker-table">
+                <tr>
+                    <th>Broker</th>
+                    <th>NerdWallet rating</th>
+                    <th>Fees</th>
+                    <th>Account minimum</th>
+                    <th>Promotion</th>
+                    <th>Learn more</th>
+                </tr>
+                <tr>
+                    <td>Fidelity</td>
+                    <td>5.0/5</td>
+                    <td>$0 per trade for online U.S. stocks and ETFs</td>
+                    <td>$0</td>
+                    <td>None</td>
+                    <td><a href="https://www.fidelity.com/">CLICK TO SIGN UP</a></td>
+                </tr>
+                <tr>
+                    <td>J.P. Morgan Self-Directed Investing</td>
+                    <td>4.1/5</td>
+                    <td>$0 per trade</td>
+                    <td>$0</td>
+                    <td>Get up to $700 when you open and fund a J.P. Morgan Self-Directed Investing account with qualifying new money.</td>
+                    <td><a href="https://www.chase.com/">CLICK TO SIGN UP</a></td>
+                </tr>
+                <tr>
+                    <td>Interactive Brokers IBKR Lite</td>
+                    <td>5.0/5</td>
+                    <td>$0 per trade</td>
+                    <td>$0</td>
+                    <td>None</td>
+                    <td><a href="https://www.interactivebrokers.com/">CLICK TO SIGN UP</a></td>
+                </tr>
+                <tr>
+                    <td>Charles Schwab</td>
+                    <td>4.9/5</td>
+                    <td>$0 per online equity trade</td>
+                    <td>$0</td>
+                    <td>None</td>
+                    <td><a href="https://www.schwab.com/">CLICK TO SIGN UP</a></td>
+                </tr>
+                <tr>
+                    <td>Robinhood</td>
+                    <td>4.3/5</td>
+                    <td>$0 per trade</td>
+                    <td>$0</td>
+                    <td>1 Free Stock after linking your bank account (stock value range $5.00-$200)</td>
+                    <td><a href="https://robinhood.com/">CLICK TO SIGN UP</a></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KAAS Finance</p>
+    </footer>
+</body>
+</html>
+
+  <footer>

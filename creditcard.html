@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    header {
+      background-color: #f5f5dc; /* Cream background color */
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333; /* Dark gray text color */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+           <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+      </ul>
+    </nav>
+  </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+        }
+        .card {
+            width: calc(20% + 20px); /* 20 pixels wider */
+            padding: 80px;
+            border-radius: 10px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .card h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        .info {
+            display: none;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+        .info h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info li {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        .info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+        .info a.url {
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Credit Cards</h1>
+    <div class="cards">
+        <div class="card" id="chase" onclick="toggleInfo('chase')">
+            <h2>Chase</h2>
+            <p>Click to see more about Chase credit cards</p>
+        </div>
+        <div class="card" id="bofa" onclick="toggleInfo('bofa')">
+            <h2>Bank of America</h2>
+            <p>Click to see more about Bank of America credit cards</p>
+        </div>
+        <div class="card" id="mastercard" onclick="toggleInfo('mastercard')">
+            <h2>Mastercard</h2>
+            <p>Click to see more about Mastercard credit cards</p>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div id="chase-info" class="info">
+            <h3>Chase Benefits</h3>
+            <ul>
+                <li>Benefits - lucrative reward programs</li>
+                <li>Benefits - including cashback and travel rewards</li>
+                <li>Benefits - robust security features, such as real-time fraud monitoring</li>
+                <li>Benefits - zero-liability protection, ensuring peace of mind for cardholders</li>
+                <li>Drawbacks - programs often come with higher annual fees and APRs</li>
+                <li>Drawbacks - this potentially outweighing the benefits for customers who don't maximize their card usage</li>
+                <li>Qualifications - In order to obtain a Chase Credit card you need a good to excellent credit score (FICO® Score of 670 or higher)</li>
+                <li>Additional Info - <a href="https://creditcards.chase.co" target="_blank" class="url">https://creditcards.chase.co</a></li>
+            </ul>
+        </div>
+
+        <div id="bofa-info" class="info">
+            <h3>Bank of America Benefits</h3>
+            <ul>
+                <li>Benefits - wide range of banking services and products, including checking accounts, savings accounts, loans, and investment options</li>
+                <li>Benefits - extensive network of ATMs and branches across the United States</li>
+                <li>Benefits - easy access to banking services and personalized assistance</li>
+                <li>Drawbacks - limited physical presence in certain regions</li>
+                <li>Qualifications - You'll need excellent credit for the best Bank of America credit cards and must be a U.S. resident</li>
+                <li>Additional Info - <a href="https://www.bankofamerica.com/credit-cards/" target="_blank" class="url">https://www.bankofamerica.com/credit-cards/</a></li>
+            </ul>
+        </div>
+
+        <div id="mastercard-info" class="info">
+            <h3>Mastercard Benefits</h3>
+            <ul>
+                <li>Benefits - global acceptance for convenient payment worldwide</li>
+                <li>Benefits - range of exclusive benefits and perks for cardholders</li>
+                <li>Benefits - purchase protection, extended warranties, and travel insurance</li>
+                <li>Drawbacks - foreign transaction fees for frequent international travelers or online shoppers</li>
+                <li>Qualifications - You don't need good credit to apply; you just need to be at least 18</li>
+                <li>Additional Info - <a href="https://mea.mastercard.com/en-region-mea/personal/find-a-card/credit-cards.html" target="_blank" class="url">https://mea.mastercard.com/en-region-mea/personal/find-a-card/credit-cards.html</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(category) {
+        var infoContainers = document.querySelectorAll('.info');
+        infoContainers.forEach(container => {
+            if (container.id === category + "-info") {
+                if (container.style.display === "block") {
+                    container.style.display = "none";
+                } else {
+                    container.style.display = "block";
+                }
+            } else {
+                container.style.display = "none";
+            }
+        });
+    }
+</script>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS Finance</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    header {
+      background-color: #f5f5dc; /* Cream background color */
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333; /* Dark gray text color */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+                  <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+      </ul>
+    </nav>
+  </header>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Expenses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222; /* Dark background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 40px;
+            font-size: 32px; /* Larger font size */
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px; /* Larger font size */
+            margin-bottom: 40px; /* Increased margin */
+        }
+        form {
+            text-align: center;
+            margin-top: 40px; /* Increased margin */
+        }
+        label {
+            font-size: 36px; /* Larger font size */
+            display: block;
+            margin-bottom: 20px; /* Increased margin */
+        }
+        input[type="text"] {
+            padding: 20px;
+            font-size: 32px; /* Larger font size */
+            width: 100%;
+            margin-bottom: 40px; /* Increased margin */
+            background-color: #444; /* Darker input background */
+            border: 2px solid #666; /* Darker border */
+            border-radius: 8px; /* Larger border radius */
+            box-sizing: border-box;
+            color: #fff; /* White text */
+        }
+        input[type="submit"] {
+            padding: 20px 40px;
+            font-size: 36px; /* Larger font size */
+            background-color: #000; /* Dark black button */
+            color: #fff; /* White text */
+            border: 2px solid #fff; /* White border */
+            cursor: pointer;
+            border-radius: 8px; /* Larger border radius */
+        }
+        input[type="submit"]:hover {
+            background-color: #111; /* Slightly lighter black hover color */
+        }
+        .response {
+            margin-top: 60px; /* Increased margin */
+            padding: 40px; /* Increased padding */
+            background-color: #333; /* Dark response background */
+            color: #fff; /* White text */
+            border-radius: 16px; /* Larger border radius */
+        }
+        .response h2 {
+            font-size: 36px; /* Larger font size */
+            color: #fff; /* White heading */
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Expenses</h1>
+    <form id="collegeForm">
+        <label for="college">Enter your college:</label>
+        <input type="text" id="college" name="college" required>
+        <label for="creditScore">Enter your credit score:</label>
+        <input type="text" id="creditScore" name="creditScore" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="response" id="expenseResponse" style="display: none;">
+        <h2>Expenses for <span id="collegeName"></span>:</h2>
+        <p id="collegeExpense"></p>
+        <h2>Recommended bank based on your credit score:</h2>
+        <p id="recommendedBank"></p>
+    </div>
+
+    <script>
+        document.getElementById("collegeForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var college = document.getElementById("college").value;
+            var creditScore = parseInt(document.getElementById("creditScore").value);
+            var expenseResponse = document.getElementById("expenseResponse");
+            var collegeName = document.getElementById("collegeName");
+            var collegeExpense = document.getElementById("collegeExpense");
+            var recommendedBank = document.getElementById("recommendedBank");
+            
+            // Update college name in response
+            collegeName.textContent = college;
+
+            // Determine college expenses based on the entered college
+            var expenses;
+            switch(college.toLowerCase()) {
+                case 'harvard':
+                    expenses = "$54,269/year";
+                    break;
+                case 'ucla':
+                    expenses = "$35,592/year";
+                    break;
+                case 'uc berkely':
+                    expenses = "$15,444/year";
+                    break;
+                case 'stanford':
+                    expenses = "$61,731/year";
+                    break;
+                case 'ucsd':
+                    expenses = "$37,662/year";
+                    break;
+                default:
+                    expenses = "Not available";
+            }
+            collegeExpense.textContent = "Annual expenses: " + expenses;
+
+            // Determine recommended bank based on credit score
+            var bank;
+            if (creditScore >= 650 && creditScore <= 700) {
+                bank = "Sallie Mae";
+            } else if (creditScore >= 600 && creditScore < 650) {
+                bank = "Ascent";
+            } else if (creditScore < 600) {
+                bank = "MPOWER";
+            } else if (creditScore >= 700 && creditScore <= 750) {
+                bank = "ISL";
+            } else if (creditScore > 750) {
+                bank = "Risla";
+            } else {
+                bank = "Not available";
+            }
+            recommendedBank.textContent = "Recommended bank: " + bank;
+
+            // Show response
+            expenseResponse.style.display = "block";
+        });
+    </script>
+</body>
+</html>

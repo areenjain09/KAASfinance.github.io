@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAAS Finance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        header {
+            background-color: #f5f5dc; /* Cream background color */
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Yusei Magic', /* Change font family */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333; /* Dark gray text color */
+            font-weight: bold;
+            font-size: 18px;
+        }
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Dark background */
+            color: #fff; /* White text */
+            font-size: 24px; /* Base font size increased by 8px */
+        }
+        .banner {
+            font-size: 36px; /* Increased font size */
+            color: #fff; /* White text */
+        }
+        .container {
+            max-width: 1600px; /* Double the original max-width */
+            margin: 40px auto; /* Double the margin */
+            padding: 40px; /* Double the padding */
+            background-color: #333; /* Darker container background */
+            border-radius: 16px; /* Double the border radius */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Light shadow */
+        }
+        h1 {
+            text-align: center;
+            font-size: 56px; /* Increased font size by 16px */
+            margin-bottom: 40px; /* Increased margin bottom for spacing */
+        }
+        h2 {
+            font-size: 40px; /* Increased font size by 8px */
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            font-size: 28px; /* Increased font size by 8px */
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 16px; /* Increased padding by 8px */
+            margin-bottom: 20px; /* Increased margin bottom by 8px */
+            border: 2px solid #666; /* Darker border */
+            border-radius: 8px; /* Double the border radius */
+            box-sizing: border-box;
+            background-color: #444; /* Darker input background */
+            color: #fff; /* White text */
+            font-size: 28px; /* Increased font size by 8px */
+        }
+        button {
+            padding: 24px 48px; /* Increased padding by 8px */
+            background-color: #000; /* Dark black */
+            color: white;
+            border: none;
+            border-radius: 8px; /* Double the border radius */
+            cursor: pointer;
+            font-size: 28px; /* Increased font size by 8px */
+        }
+        button:hover {
+            background-color: #111; /* Slightly lighter black on hover */
+        }
+        #recommendations {
+            display: none;
+        }
+        #recommendations p {
+            margin-bottom: 20px; /* Increased margin bottom by 8px */
+            font-size: 28px; /* Increased font size by 8px */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+           <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <h1>KAAS Finance Advisor</h1>
+    <form id="financialForm">
+        <label for="income">Monthly Income ($):</label>
+        <input type="number" id="income" name="income" required><br>
+        <label for="expenses">Monthly Expenses ($):</label>
+        <input type="number" id="expenses" name="expenses" required><br>
+        <label for="savings">Current Savings ($):</label>
+        <input type="number" id="savings" name="savings" required><br>
+        <button type="button" onclick="calculateRecommendation()">Get Recommendations</button>
+    </form>
+    <div id="recommendations">
+        <h2>Personalized Recommendations</h2>
+        <p id="budgetAdvice"></p>
+        <p id="investmentAdvice"></p>
+    </div>
+</div>
+
+<script>
+    // Function to calculate recommendations based on user input
+    function calculateRecommendation() {
+        const income = parseFloat(document.getElementById("income").value);
+        const expenses = parseFloat(document.getElementById("expenses").value);
+        const savings = parseFloat(document.getElementById("savings").value);
+
+        const discretionaryIncome = income - expenses;
+        const emergencyFund = expenses * 3;
+        let budgetAdvice = "";
+        let investmentAdvice = "";
+
+        // Budgeting advice
+        if (discretionaryIncome > 0) {
+            budgetAdvice = `You have a discretionary income of $${discretionaryIncome.toFixed(2)} per month. Consider allocating this towards savings and investments.`;
+        } else {
+            budgetAdvice = "You are spending more than you earn. Review your expenses and find areas to cut back.";
+        }
+
+        // Investment advice
+        if (savings >= emergencyFund) {
+            investmentAdvice = "You have a sufficient emergency fund. Consider investing your savings in diversified investment portfolios for long-term growth.";
+        } else {
+            investmentAdvice = `You should prioritize building an emergency fund. Aim to save at least $${emergencyFund.toFixed(2)} to cover 3 months of expenses.`;
+        }
+
+        // Display recommendations
+        document.getElementById("budgetAdvice").textContent = budgetAdvice;
+        document.getElementById("investmentAdvice").textContent = investmentAdvice;
+        document.getElementById("recommendations").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

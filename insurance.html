@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    header {
+      background-color: #f5f5dc; /* Cream background color */
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333; /* Dark gray text color */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+                  <li><a href="https://kaasfinance.neocities.org/">Home</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/AboutUs">About Us</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/insurance">Insurance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/creditcard">Credit Cards</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/studentloans">Student Loans</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/Financial">KAAS Assistance</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/investing">Investing</a></li> <!-- Updated link -->
+          <li><a href="https://kaasfinance.neocities.org/advisor">Advisor</a></li> <!-- Updated link -->
+      </ul>
+    </nav>
+  </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+        }
+        .card {
+            width: calc(20% + 20px); /* 20 pixels wider */
+            padding: 80px;
+            border-radius: 10px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .card h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        .info {
+            display: none;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            margin-top: 20px;
+            line-height: 1.8;
+            transition: height 0.3s ease; /* Added transition for height */
+            font-size: 48px; /* Increased font size to be two times bigger */
+        }
+        .info h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info li {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        .info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+        .info a.url {
+            color: #fff;
+            font-weight: bold;
+        }
+        .info-container {
+            height: 620px; /* Increased height by 200px */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Insurance</h1>
+    <div class="cards">
+        <div class="card" id="life" onclick="toggleInfo('life')">
+            <h2>Life Insurance</h2>
+            <p>Click to see more about Life Insurance</p>
+        </div>
+        <div class="card" id="auto" onclick="toggleInfo('auto')">
+            <h2>Auto Insurance</h2>
+            <p>Click to see more about Auto Insurance</p>
+        </div>
+        <div class="card" id="home" onclick="toggleInfo('home')">
+            <h2>Home Insurance</h2>
+            <p>Click to see more about Home Insurance</p>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div id="life-info" class="info">
+            <h3>Life Insurance Companies</h3>
+            <ul>
+                <li>Prudential Financial - <a href="https://www.prudential.com" target="_blank" class="url">Visit Website</a></li>
+                <li>MetLife - <a href="https://www.metlife.com" target="_blank" class="url">Visit Website</a></li>
+                <li>State Farm - <a href="https://www.statefarm.com" target="_blank" class="url">Visit Website</a></li>
+            </ul>
+        </div>
+
+        <div id="auto-info" class="info">
+            <h3>Auto Insurance Companies</h3>
+            <ul>
+                <li>GEICO - <a href="https://www.geico.com" target="_blank" class="url">Visit Website</a></li>
+                <li>Progressive Corporation - <a href="https://www.progressive.com" target="_blank" class="url">Visit Website</a></li>
+                <li>AllState Corporation - <a href="https://www.allstate.com" target="_blank" class="url">Visit Website</a></li>
+            </ul>
+        </div>
+
+        <div id="home-info" class="info">
+            <h3>Home Insurance Companies</h3>
+            <ul>
+                <li>Chubb Limited - <a href="https://www.chubb.com" target="_blank" class="url">Visit Website</a></li>
+                <li>Farmers Insurance - <a href="https://www.farmers.com" target="_blank" class="url">Visit Website</a></li>
+                <li>American Family Insurance - <a href="https://www.amfam.com" target="_blank" class="url">Visit Website</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(category) {
+        var infoContainers = document.querySelectorAll('.info');
+        infoContainers.forEach(container => {
+            if (container.id === category + "-info") {
+                if (container.style.display === "block") {
+                    container.style.display = "none";
+                    container.style.height = "calc(75% )"; /* Increase height by 30px */
+                } else {
+                    container.style.display = "block";
+                    container.style.height = "calc(75%) "; /* Increase height by 30px */
+                }
+            } else {
+                container.style.display = "none";
+                container.style.height = "auto"; /* Reset height */
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
